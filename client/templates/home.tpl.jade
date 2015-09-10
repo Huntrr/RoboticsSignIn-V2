@@ -1,0 +1,28 @@
+.jumbotron
+  div.container
+    br
+    input.form-control#personName(type="text" placeholder="What's your name?")
+    br
+    if isName
+      button.btn.btn-primary.btn-block#add-user(type="button" 
+      style="margin-bottom: -29px; margin-top: -5px;")
+        | Not here? Create entry for "#{personName}"
+
+.container
+  .well.text-center.col-sm-4.col-sm-offset-4
+    button.btn.btn-primary.btn-block#head-home(type="button") Head home
+
+.container
+  table.table.table-hover
+    thead(style="font-weight: bold;")
+      tr
+        td Name
+        td Season Total
+        td Status
+        td History
+        td Sign out/in
+        if admin
+          td Delete
+    tbody
+      each users
+        +status

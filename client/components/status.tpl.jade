@@ -1,0 +1,14 @@
+tr(class="#{statStyle}")
+  td(style="vertical-align: middle;") #{name}
+  td(style="vertical-align: middle;") {{parseSeconds seasonTime}}
+  td(style="vertical-align: middle;") #{stat}
+  td(style="vertical-align: middle;") 
+    a(href="/user/#{_id}") Logs
+  td
+    if in
+      button.btn.btn-default.sign-out(type="button") Sign out
+    else
+      button.btn.btn-default.sign-in(type="button") Sign in
+  if admin
+    td
+      button.btn.btn-default.delete-user(type="button") X

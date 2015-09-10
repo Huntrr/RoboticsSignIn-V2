@@ -1,0 +1,8 @@
+tr(class="#{logStyle}")
+  td #{parseDate}
+  td #{parseStart}
+  td #{parseEnd}
+  td #{parseTime}
+  if admin
+    td
+      button.btn.btn-default.delete-log(type="button") X

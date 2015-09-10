@@ -1,0 +1,24 @@
+br
+.well
+  h4.text-center Add an entry?
+  form.form-horizontal.add-entry
+    .form-group
+      label.col-sm-2.control-label(for="date-picker") Date
+      .input-group.date.col-sm-8#date-picker
+        input.form-control(type="text")
+        span.input-group-addon
+          span.glyphicon.glyphicon-calendar
+    .form-group
+      label.col-sm-2.control-label(for="start-picker") Sign in
+      .input-group.date.col-sm-8#start-picker
+        input.form-control(type="text")
+        span.input-group-addon
+          span.glyphicon.glyphicon-time
+    .form-group
+      label.col-sm-2.control-label(for="end-picker") Sign out
+      .input-group.date.col-sm-8#end-picker
+        input.form-control(type="text")
+        span.input-group-addon
+          span.glyphicon.glyphicon-time
+    .form-group.text-center
+      input.btn.btn-default(type="submit" value="Add Log")

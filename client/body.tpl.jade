@@ -1,0 +1,19 @@
+nav(class="navbar navbar-inverse navbar-fixed-top")
+  div.container
+    div.navbar-header
+      button.navbar-toggle.collapse(type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar")
+        span.sr-only Toggle navigation
+        span.icon-bar
+      a.navbar-brand(href="/") B[Ar]low Rob[Au]tics Sign In
+    div#navbar.navbar-collapse.collapse
+      .navbar-right
+        if currentUser
+          span.navbar-text Hello <span style="font-weight: bold;">#{currentUser.username}</span>
+          a.navbar-text.log-out(href="#") (sign out)
+
++yield
+
+div.container
+  hr
+  footer
+    p &copy; <a href="http://hunterlightman.com">Hunter Lightman</a> #{year} <span style="color: #CCCCCC">- with a little help from Dumpy</span>
